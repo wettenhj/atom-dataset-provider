@@ -14,14 +14,14 @@
   {{/prev}}
   {{#datasets}}
   <entry>
-    <id>{{relpath1}}/{{relpath2}}</id> 
-    <tardis:uniqueid>{{id}}</tardis:uniqueid>
+    <id>{{relpath1}}/{{relpath3}}/{{relpath4}}</id> 
+    <tardis:uniqueid>{{relpath1}}/{{relpath3}}/{{relpath4}}</tardis:uniqueid>
     <author>
-      <name>{{author.name}}</name>
+      <name>{{relpath1}}</name>
     </author>
-    <tardis:experimentTitle>{{relpath1}}</tardis:experimentTitle>
-    <title>{{relpath2}}</title>
-    <tardis:instrument>{{relpath2}}</tardis:instrument>
+    <tardis:experimentTitle>{{relpath3}}</tardis:experimentTitle>
+    <title>{{relpath4}}</title>
+    <tardis:instrument>Hitachi Microscope</tardis:instrument>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <ul>
@@ -45,7 +45,10 @@
           hash="sha-512:{{sha512}}"/>
     {{/files}}
     <updated>{{updatedAsTimestamp}}</updated>
-    <category scheme="http://mytardis.org.au/ns/ExperimentTitle" term="{{relpath1}}" />
+    <category scheme="http://mytardis.org/schemas/atom-import#experiment-ExperimentID"
+        term="{{relpath1}}/{{relpath3}}"/>
+    <category scheme="http://mytardis.org/schemas/atom-import#experiment-ExperimentTitle"
+        term="{{relpath3}}"/>
   </entry>
   {{/datasets}}
 </feed>
