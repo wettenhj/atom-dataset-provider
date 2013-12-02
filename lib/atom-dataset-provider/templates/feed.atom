@@ -24,7 +24,7 @@
       <div xmlns="http://www.w3.org/1999/xhtml">
         <ul>
           {{#files}}
-          <li>{{href}}</li>
+          <li><a href="{{href}}" title="{{sha512}}" type="{{type}}">{{title}}</a></li>
           {{/files}}
         </ul>
       </div>
