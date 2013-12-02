@@ -40,14 +40,10 @@
           created="{{created}}"/>
     {{/files}}
     <updated>{{updatedAsTimestamp}}</updated>
-<<<<<<< HEAD
     <category scheme="http://mytardis.org/schemas/atom-import#experiment-ExperimentID"
         term="{{relpath1}}/{{relpath3}}"/>
     <category scheme="http://mytardis.org/schemas/atom-import#experiment-ExperimentTitle"
         term="{{relpath3}}"/>
-=======
-    <category scheme="http://mytardis.org.au/ns/ExperimentTitle" term="{{relpath3}}" />
->>>>>>> 78b5d4019245747e9eb7385ad28c950c73845c75
   </entry>
   {{/datasets}}
 </feed>
