@@ -19,11 +19,18 @@
     </author>
     <tardis:experimentTitle>{{relpath3}}</tardis:experimentTitle>
     <title>{{relpath4}}</title>
-    <tardis:instrument>Hitachi Microscope</tardis:instrument>
+    <tardis:instrument>Tardis Instrument Name</tardis:instrument>
+    <updated>{{updatedAsTimestamp}}</updated>
+    <category scheme="http://mytardis.org/schemas/atom-import#experiment-ExperimentID"
+        term="{{relpath1}}/{{relpath3}}"/>
+    <category scheme="http://mytardis.org/schemas/atom-import#experiment-ExperimentTitle"
+        term="{{relpath3}}"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <ul>
           {{#files}}
+{{! Commented out due to issues with links getting processed twice (MicroTardis project). }}
+{{! <li>{href}</li> }}
           <li><a href="{{href}}" title="{{sha512}}" type="{{type}}">{{title}}</a></li>
           {{/files}}
         </ul>
@@ -39,11 +46,6 @@
           updated="{{updated}}"
           created="{{created}}"/>
     {{/files}}
-    <updated>{{updatedAsTimestamp}}</updated>
-    <category scheme="http://mytardis.org/schemas/atom-import#experiment-ExperimentID"
-        term="{{relpath1}}/{{relpath3}}"/>
-    <category scheme="http://mytardis.org/schemas/atom-import#experiment-ExperimentTitle"
-        term="{{relpath3}}"/>
   </entry>
   {{/datasets}}
 </feed>
