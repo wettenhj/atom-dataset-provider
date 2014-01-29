@@ -43,6 +43,7 @@
           length="{{length}}"
           type="{{type}}"
           path="{{path}}"
+          subdirectory="{{subdirectory}}"
           updated="{{updated}}"
           created="{{created}}"/>
     {{/files}}
